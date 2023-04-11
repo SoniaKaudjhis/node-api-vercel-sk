@@ -9,7 +9,6 @@ const PORT = 4000
 
 
 app.use('/public', express.static(process.cwd() + '/public'));
-
 app.route('/_api/package.json')
   .get(function(req, res, next) {
     console.log('requested');
@@ -40,7 +39,7 @@ app.use(function(err, req, res, next) {
 })
 
 //Listen on port set in environment variable or default to 3000
-const listener = app.listen(process.env.PORT || 3000, function () {
+const listener = app.listen(PORT || 3000, function () {
   console.log("Node.js listening on port " + listener.address().port);
 });
 
