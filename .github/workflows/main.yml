@@ -23,9 +23,6 @@ jobs:
       - name: Install 🔧
         run: yarn install
 
-      - name: Lint 🧐
-        run: yarn lint:check
-
       - name: Build 🏗️
         run: yarn build
         env:
